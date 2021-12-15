@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="winner"></div>
+    <button id="play-game">PLAY!</button>
+    <button id="reset">RESET!</button>
+    <script>
+        // Play Game Function
+        /*
+        Roll Two "dice" (range 1-6)
+        If the player's dice roll is higher than the computer
+        dice roll, display "PLAYER WINS"
+
+        otherwise, display "COMPUTER WINS"
+        Random Function:
+        Math.floor(Math.random()*6)+1; 
+        */
+
+       // BONUS
+       // Add a div with text content displaying
+       // Computer Score, Player Score & the winner :)
+       //, so there is a running record
+       // of game data
+
+        //Reset Function
+        // Clear the text from the winner
+        // BONUS - REMOVE ALL child divs, leaving just the parent div
+        // creating a clean slate for a new set of games :)
+   
+        //    const dice= [1,2,3,4,5,6]
+       
+      
+    
+        function diceRoll1(){
+        let player = Math.floor(Math.random() * 6)+ 1;
+        let complayer =  Math.floor(Math.random() * 6) + 1;
+        // Bonus need to add parent, appendChild, set to reset.
+        let winnerDiv = document.createElement('div')
+
+        if (player> complayer){
+            alert ('Player Wins' + " " + player)
+        }
+        else if (complayer> player){
+           alert ('Computer Wins!' + " " + complayer)} 
+           else alert ('It is tie!')
+        }
+        
+        function reset (){
+            let player = 0;
+            let comPlayer = 0;
+        }
+
+
+    // Button
+    document.getElementById("play-game").onclick = diceRoll1;
+    document.getElementById("reset").onclick = reset;
+    </script>
+</body>
+
+</html>
